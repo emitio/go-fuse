@@ -52,12 +52,12 @@ func init() {
 	r.Close()
 	w.Close()
 
-	fd, err := syscall.Open("/dev/null", os.O_WRONLY, 0)
-	if err != nil {
-		log.Panicf("splice: %v", err)
-	}
+	// fd, err := syscall.Open("/dev/null", os.O_WRONLY, 0)
+	// if err != nil {
+	// 	log.Panicf("splice: %v", err)
+	// }
 
-	devNullFD = uintptr(fd)
+	// devNullFD = uintptr(fd)
 }
 
 // copy & paste from syscall.
